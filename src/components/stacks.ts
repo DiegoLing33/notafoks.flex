@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { Flex } from './flex';
+import { Flex, FlexProps } from './flex';
 
 /**
  * Вертикальный стек
  */
-export const VStack = styled(Flex)`
+export const VStack = styled(Flex)<FlexProps>`
     display: flex;
     flex-direction: column;
 `;
@@ -12,7 +12,7 @@ export const VStack = styled(Flex)`
 /**
  * Горизонтальный стек
  */
-export const HStack = styled(Flex)`
+export const HStack = styled(Flex)<FlexProps>`
     display: flex;
     flex-direction: row;
 `;

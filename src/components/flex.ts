@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { AutoMixin, AutoSelfMixin, TrueMixin } from '../utils/mixins';
+import { AutoMixin, TrueMixin } from '../utils/mixins';
 import { Box, BoxProps } from './box';
 
 export type FlexAlign = 'center' | 'space-between' | 'flex-start' | 'flex-end';
@@ -25,9 +25,8 @@ export interface FlexProps extends BoxProps {
 
     // Свойства
     gap?: true | string | number;
+
     // Автоматические свойства
-    width?: string;
-    height?: string;
     justify?: FlexAlign;
     align?: FlexAlign;
 }
@@ -35,7 +34,7 @@ export interface FlexProps extends BoxProps {
 /**
  * Флекс элемент
  */
-export const Flex = styled(Box)`
+export const Flex = styled(Box)<FlexProps>`
     display: flex;
     //  Флаговые примеси
     ${TrueMixin('column', 'flex-direction', 'column')};
@@ -55,8 +54,4 @@ export const Flex = styled(Box)`
     //  Автоматические примеси
     ${AutoMixin('justify', 'justify-content')};
     ${AutoMixin('align', 'align-items')};
-
-    //  Автоматические self-примеси
-    ${AutoSelfMixin('width')};
-    ${AutoSelfMixin('height')};
 `;
