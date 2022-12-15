@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components';
-import { HTMLAttributes } from 'react';
 import { AutoSelfMixin, AutoTrueSelfMixin, TrueMixin } from '../utils/mixins';
 import { FoksUIConfig } from '../config';
 
 export type Color = string;
 
-export interface BoxProps extends HTMLAttributes<'div'> {
+export interface BoxProps {
     w100?: true;
     h100?: true;
 
