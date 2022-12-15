@@ -15,12 +15,17 @@ export interface FlexProps extends BoxProps {
     minH100vh?: true;
 
     // Отступы
+    // @deprecated
     alignCenter?: true;
+    // @deprecated
     alignSpace?: true;
+    // @deprecated
     justifyCenter?: true;
+    // @deprecated
     justifySpace?: true;
 
     // Полная оцентровка
+    // @deprecated
     allCenter?: true;
 
     // Свойства

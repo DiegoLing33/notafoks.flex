@@ -5,20 +5,31 @@ import { FoksUIConfig } from '../config';
 export type Color = string;
 
 export interface BoxProps {
+    // @deprecated
     w100?: true;
+    // @deprecated
     h100?: true;
 
     // Внутренние отступы
+    // @deprecated
     p?: true;
+    // @deprecated
     pSmall?: true;
+    // @deprecated
     pLarge?: true;
 
     // Внешние отступы
+    // @deprecated
     m?: true;
+    // @deprecated
     mSmall?: true;
+    // @deprecated
     mLarge?: true;
+
     // Соединенные флаги
+    // @deprecated
     padding?: true | string | number;
+    // @deprecated
     margin?: true | string | number;
 
     color?: string;
